@@ -15,6 +15,12 @@
 - **Self-Consistency**: Multiple samples + majority vote
 - **Plan-and-Solve**: Break down complex problems
 
+## Complex Workflows
+- **Chain of Draft**: Concise reasoning steps (~5 words each), ~80% fewer tokens than CoT
+- **System 2 Attention**: Filter irrelevant context before answering (2-step process)
+- **Prompt Chaining**: Sequential prompts, output feeds input (validate between steps)
+- **Meta Prompting**: Model generates/optimizes its own prompts (evaluate → optimize → repeat)
+
 ## Safety Considerations
 - Validate user inputs
 - Implement content filtering
