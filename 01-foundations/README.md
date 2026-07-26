@@ -95,37 +95,31 @@ Setting this too low truncates responses mid-sentence. Setting it too high waste
 
 ```mermaid
 flowchart TD
-    A[Prompt Input] --> B[Model Computes<br/>Token Probabilities]
+    A[Prompt Input] --> B[Model Computes Token Probabilities]
     B --> C{Temperature Setting}
-    C -->|0.0| D[Peaked Distribution<br/>High-probability tokens dominate]
-    C -->|0.7| E[Balanced Distribution<br/>Moderate spread]
-    C -->|1.5| F[Flattened Distribution<br/>All tokens more equal]
-    
+    C -->|0.0| D[Peaked Distribution]
+    C -->|0.7| E[Balanced Distribution]
+    C -->|1.5| F[Flattened Distribution]
+
     D --> G{Top-p Truncation}
     E --> G
     F --> G
-    
-    G -->|0.1| H[Small token set<br/>~10% of probability mass]
-    G -->|0.9| I[Large token set<br/>~90% of probability mass]
-    
+
+    G -->|0.1| H[Small token set]
+    G -->|0.9| I[Large token set]
+
     H --> J{Top-k Limit}
     I --> J
-    
-    J -->|k=10| K[Max 10 tokens considered]
+
+    J -->|k=10| K[Max 10 tokens]
     J -->|k=500| L[Virtually no limit]
-    
+
     K --> M[Sample Token]
     L --> M
-    
+
     M --> N{Stop Condition Met?}
     N -->|No| B
     N -->|Yes| O[Final Output]
-    
-    style A fill:#4CAF50,color:white
-    style O fill:#2196F3,color:white
-    style D fill:#FFC107,color:black
-    style E fill:#FF9800,color:white
-    style F fill:#F44336,color:white
 ```
 
 ---
