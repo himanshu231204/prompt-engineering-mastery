@@ -17,6 +17,18 @@
   <img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen" alt="Status">
 </p>
 
+<p align="center">
+  <a href="https://github.com/himanshu231204" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-himanshu231204-181717?logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://linkedin.com/in/himanshu231204" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-himanshu231204-0A66C2?logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="https://twitter.com/himanshu231204" target="_blank">
+    <img src="https://img.shields.io/badge/Twitter-himanshu231204-1DA1F2?logo=x&logoColor=white" alt="Twitter">
+  </a>
+</p>
+
 ---
 
 ## What This Is
@@ -174,5 +186,8 @@ MIT License — see [LICENSE](LICENSE) for details.
 ---
 
 <p align="center">
-  Built for engineers who treat prompts as code, not magic.
+  Built by <a href="https://github.com/himanshu231204"><strong>himanshu231204</strong></a> · 
+  <a href="https://github.com/himanshu231204/prompt-engineering-mastery">GitHub</a> · 
+  <a href="https://linkedin.com/in/himanshu231204">LinkedIn</a> · 
+  <a href="https://twitter.com/himanshu231204">Twitter/X</a>
 </p>
