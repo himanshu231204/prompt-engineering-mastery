@@ -5,6 +5,14 @@
   Mirrors the "engineering manual" palette from the marketing artifact:
   ink / paper / slate neutrals + a single signal-gold accent.
 */
+/*
+  Material derives a lot of its component colors (--md-typeset-color,
+  --md-code-fg-color, --md-admonition-fg-color, ...) from the four base
+  tokens via var(), but that derivation is only wired up for its own
+  built-in "default"/"slate" schemes. For a custom scheme name those
+  derived variables never re-resolve down the tree, so every one that
+  matters has to be set explicitly here rather than left to inherit.
+*/
 :root,
 [data-md-color-scheme="pem-light"] {
   --pem-ink: #12151a;
@@ -23,11 +31,34 @@
   --md-primary-fg-color: var(--pem-ink);
   --md-primary-bg-color: var(--pem-paper);
   --md-accent-fg-color: var(--pem-accent);
+
   --md-default-bg-color: var(--pem-paper);
+  --md-default-bg-color--light: var(--pem-paper);
+  --md-default-bg-color--lighter: var(--pem-paper);
+  --md-default-bg-color--lightest: var(--pem-paper);
   --md-default-fg-color: var(--pem-ink);
   --md-default-fg-color--light: var(--pem-slate);
   --md-default-fg-color--lighter: var(--pem-slate-soft);
+  --md-default-fg-color--lightest: var(--pem-line);
+
+  --md-typeset-color: var(--pem-ink);
   --md-typeset-a-color: var(--pem-accent-ink);
+  --md-typeset-mark-color: color-mix(in srgb, var(--pem-accent) 35%, transparent);
+  --md-typeset-table-color: var(--pem-line);
+  --md-typeset-table-color--light: var(--pem-line);
+
+  --md-code-fg-color: var(--pem-ink-soft);
+  --md-code-bg-color: var(--pem-paper-raised);
+  --md-code-bg-color--light: var(--pem-paper-raised);
+  --md-code-bg-color--lighter: var(--pem-paper-raised);
+
+  --md-admonition-fg-color: var(--pem-ink);
+  --md-admonition-bg-color: var(--pem-paper-raised);
+
+  --md-footer-fg-color: var(--pem-paper);
+  --md-footer-fg-color--light: var(--pem-slate-soft);
+  --md-footer-bg-color: var(--pem-ink);
+  --md-footer-bg-color--dark: var(--pem-ink);
 }
 
 [data-md-color-scheme="pem-dark"] {
@@ -47,14 +78,34 @@
   --md-primary-fg-color: var(--pem-ink);
   --md-primary-bg-color: var(--pem-paper);
   --md-accent-fg-color: var(--pem-accent);
+
   --md-default-bg-color: var(--pem-paper);
+  --md-default-bg-color--light: var(--pem-paper);
+  --md-default-bg-color--lighter: var(--pem-paper);
+  --md-default-bg-color--lightest: var(--pem-paper);
   --md-default-fg-color: var(--pem-ink);
   --md-default-fg-color--light: var(--pem-slate);
   --md-default-fg-color--lighter: var(--pem-slate-soft);
-  --md-typeset-a-color: var(--pem-accent);
+  --md-default-fg-color--lightest: var(--pem-line);
 
-  --md-code-bg-color: var(--pem-code-bg);
+  --md-typeset-color: var(--pem-ink);
+  --md-typeset-a-color: var(--pem-accent);
+  --md-typeset-mark-color: color-mix(in srgb, var(--pem-accent) 35%, transparent);
+  --md-typeset-table-color: var(--pem-line);
+  --md-typeset-table-color--light: var(--pem-line);
+
   --md-code-fg-color: #d7dae0;
+  --md-code-bg-color: var(--pem-code-bg);
+  --md-code-bg-color--light: var(--pem-code-bg);
+  --md-code-bg-color--lighter: var(--pem-code-bg);
+
+  --md-admonition-fg-color: var(--pem-ink);
+  --md-admonition-bg-color: var(--pem-paper-raised);
+
+  --md-footer-fg-color: var(--pem-ink);
+  --md-footer-fg-color--light: var(--pem-slate);
+  --md-footer-bg-color: var(--pem-paper-raised);
+  --md-footer-bg-color--dark: var(--pem-paper-raised);
 }
 
 body,
