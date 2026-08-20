@@ -1,0 +1,106 @@
+site_name: Prompt Engineering Mastery
+site_description: >-
+  A model-agnostic, engineering-first curriculum for building reliable
+  LLM-powered systems — design patterns, failure modes, security threats,
+  testing strategies, and evaluation pipelines.
+site_url: https://himanshu231204.github.io/prompt-engineering-mastery/
+repo_name: himanshu231204/prompt-engineering-mastery
+repo_url: https://github.com/himanshu231204/prompt-engineering-mastery
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 himanshu231204 — MIT Licensed
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  font: false # fonts are loaded manually in extra.css to use IBM Plex, not the Material defaults
+  icon:
+    logo: material/alpha-p-box-outline
+    repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: pem-light
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: pem-dark
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/himanshu231204
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/himanshu231204
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/himanshu231204
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+validation:
+  links:
+    # Module READMEs link to their own notebook.ipynb / mini-project/, which
+    # live in the module folders themselves rather than under docs_dir.
+    not_found: ignore
+
+plugins:
+  - search
+  - include-markdown
+
+nav:
+  - Home: index.md
+  - Quick Start: quick-start.md
+  - Modules:
+      - Overview: modules/index.md
+      - "01 · Foundations": modules/01-foundations.md
+      - "02 · Essential Strategies": modules/02-essential-strategies.md
+      - "03 · Reasoning & Logic": modules/03-reasoning-and-logic.md
+      - "04 · Complex Workflows": modules/04-complex-workflows.md
+      - "05 · Multimodal & Applied": modules/05-multimodal-and-applied.md
+      - "06 · Security & Robustness": modules/06-security-and-robustness.md
+      - "07 · Prompt Management": modules/07-prompt-management.md
+  - Resources:
+      - Cheatsheet: resources/cheatsheet.md
+      - Further Reading: resources/further-reading.md
+  - Contributing: contributing.md

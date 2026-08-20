@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+/*
+  Prompt Engineering Mastery — doc site tokens.
+  Mirrors the "engineering manual" palette from the marketing artifact:
+  ink / paper / slate neutrals + a single signal-gold accent.
+*/
+:root,
+[data-md-color-scheme="pem-light"] {
+  --pem-ink: #12151a;
+  --pem-ink-soft: #2b2f37;
+  --pem-paper: #f6f5f2;
+  --pem-paper-raised: #ffffff;
+  --pem-slate: #565f6b;
+  --pem-slate-soft: #8a93a0;
+  --pem-line: #dadfe3;
+  --pem-accent: #c98a2b;
+  --pem-accent-ink: #5c3e10;
+  --pem-rust: #b5482a;
+  --pem-good: #3f7a5c;
+  --pem-code-bg: #181b21;
+
+  --md-primary-fg-color: var(--pem-ink);
+  --md-primary-bg-color: var(--pem-paper);
+  --md-accent-fg-color: var(--pem-accent);
+  --md-default-bg-color: var(--pem-paper);
+  --md-default-fg-color: var(--pem-ink);
+  --md-default-fg-color--light: var(--pem-slate);
+  --md-default-fg-color--lighter: var(--pem-slate-soft);
+  --md-typeset-a-color: var(--pem-accent-ink);
+}
+
+[data-md-color-scheme="pem-dark"] {
+  --pem-ink: #edeef0;
+  --pem-ink-soft: #c7cbd1;
+  --pem-paper: #101216;
+  --pem-paper-raised: #171a20;
+  --pem-slate: #9199a6;
+  --pem-slate-soft: #6b7280;
+  --pem-line: #2a2e36;
+  --pem-accent: #e3a64a;
+  --pem-accent-ink: #f4d9a8;
+  --pem-rust: #e07a56;
+  --pem-good: #63b58a;
+  --pem-code-bg: #0b0d10;
+
+  --md-primary-fg-color: var(--pem-ink);
+  --md-primary-bg-color: var(--pem-paper);
+  --md-accent-fg-color: var(--pem-accent);
+  --md-default-bg-color: var(--pem-paper);
+  --md-default-fg-color: var(--pem-ink);
+  --md-default-fg-color--light: var(--pem-slate);
+  --md-default-fg-color--lighter: var(--pem-slate-soft);
+  --md-typeset-a-color: var(--pem-accent);
+
+  --md-code-bg-color: var(--pem-code-bg);
+  --md-code-fg-color: #d7dae0;
+}
+
+body,
+.md-typeset {
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+code,
+pre,
+kbd,
+.md-typeset code,
+.md-nav__link .md-ellipsis,
+.md-header__topic,
+.md-tag {
+  font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+.md-header {
+  background-color: var(--pem-paper);
+  color: var(--pem-ink);
+  border-bottom: 1px solid var(--pem-line);
+  box-shadow: none;
+}
+
+.md-header__title,
+.md-header__topic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+}
+
+.md-tabs {
+  background-color: var(--pem-paper);
+  border-bottom: 1px solid var(--pem-line);
+  color: var(--pem-slate);
+}
+
+.md-tabs__link {
+  font-size: 0.7rem;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset a {
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  color: var(--pem-accent);
+}
+
+/* ---------- Hero (index page) ---------- */
+.pem-hero {
+  padding: 2rem 0 1.5rem;
+}
+
+.pem-eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pem-slate);
+  margin: 0 0 0.75rem;
+}
+
+.pem-hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  line-height: 1.1;
+  max-width: 20ch;
+}
+
+.pem-sub {
+  max-width: 55ch;
+  color: var(--pem-slate);
+  font-size: 1.05rem;
+}
+
+.pem-cta-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.pem-cta-row .md-button {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  border-radius: 0;
+}
+
+.pem-cta-row .md-button--primary {
+  background-color: var(--pem-ink);
+  border-color: var(--pem-ink);
+  color: var(--pem-paper);
+}
+
+.pem-terminal {
+  background: var(--pem-code-bg);
+  border: 1px solid var(--pem-line);
+  margin: 1.5rem 0 2rem;
+}
+
+.pem-terminal .highlight {
+  margin: 0;
+}
+
+.pem-terminal pre,
+.pem-terminal code {
+  background: transparent;
+  color: #d7dae0;
+  font-size: 0.8rem;
+}
+
+.pem-stats table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pem-stats table,
+.pem-stats th,
+.pem-stats td {
+  border: none;
+}
+
+.pem-stats td {
+  border-left: 1px solid var(--pem-line);
+  border-top: 1px solid var(--pem-line);
+  padding: 1.25rem 1.25rem;
+  vertical-align: top;
+  background: transparent;
+}
+
+.pem-stats td:first-child {
+  border-left: none;
+}
+
+.pem-stats td strong {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.9rem;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.pem-stats td span {
+  font-size: 0.8rem;
+  color: var(--pem-slate);
+}
+
+/* ---------- Feature card grid ---------- */
+.md-typeset .grid.cards > ul,
+.md-typeset .grid.cards {
+  gap: 0;
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > * {
+  border-radius: 0;
+  border: 1px solid var(--pem-line);
+  background: var(--pem-paper);
+}
+
+/* ---------- Difficulty pips on the modules table ---------- */
+.pem-beg {
+  color: var(--pem-good) !important;
+}
+
+.pem-int {
+  color: var(--pem-accent) !important;
+}
+
+.pem-adv {
+  color: var(--pem-rust) !important;
+}
